@@ -7,46 +7,111 @@ const LandingPage = () => {
 
   const projects = [
     {
-      id: 'cammt',
-      title: 'CamMT - Cameroon Machine Translation',
-      description: 'A revolutionary translation system for Cameroonian low-resource languages using advanced AI and NLP.',
+      id: 'linguomt',
+      title: 'LinguoMT - Machine Translation System',
+      description: 'Advanced machine translation system for African low-resource languages using state-of-the-art AI and NLP techniques.',
       features: [
-        'Real-time image-to-text translation',
-        'Support for 9+ African languages',
-        'User-friendly camera interface',
-        'Translation history and favorites'
+        'Real-time text translation',
+        'Support for 10+ African languages',
+        'Advanced neural networks',
+        'Translation quality optimization'
       ],
-      technologies: ['React', 'AI/ML', 'Computer Vision', 'NLP'],
+      technologies: ['Python', 'Transformers', 'NLP', 'Deep Learning'],
       status: 'Active',
       link: '/cammt'
     },
     {
-      id: 'corpus',
-      title: 'African Language Corpus',
-      description: 'Building comprehensive digital corpora for African low-resource languages to support NLP research.',
+      id: 'linguoner',
+      title: 'LinguoNER - Named Entity Recognition',
+      description: 'Named Entity Recognition system specifically designed for African languages and cultural contexts.',
       features: [
-        'Multi-language text datasets',
-        'Annotated linguistic data',
-        'Speech recognition datasets',
-        'Open-source resources'
+        'Cultural context awareness',
+        'Multi-language entity extraction',
+        'Custom training datasets',
+        'API integration support'
       ],
-      technologies: ['Data Science', 'Linguistics', 'Python', 'XML'],
+      technologies: ['Python', 'spaCy', 'BERT', 'Machine Learning'],
       status: 'In Development',
       link: '#'
     },
     {
-      id: 'dictionary',
-      title: 'Digital Dictionary Platform',
-      description: 'Interactive digital dictionaries for African languages with pronunciation guides and cultural context.',
+      id: 'genomics',
+      title: 'Healthcare & Genomics Research',
+      description: 'Data science applications in healthcare and genomics for African populations and disease patterns.',
       features: [
-        'Audio pronunciations',
-        'Cultural context',
-        'Etymology tracking',
-        'Cross-language search'
+        'Genomic data analysis',
+        'Disease pattern recognition',
+        'Population health insights',
+        'Predictive modeling'
       ],
-      technologies: ['Web Technologies', 'Audio Processing', 'Database'],
+      technologies: ['Bioinformatics', 'R', 'Python', 'Statistical Analysis'],
+      status: 'Active',
+      link: '#'
+    },
+    {
+      id: 'digital-humanities',
+      title: 'Digital Humanities',
+      description: 'Preserving and digitizing African cultural heritage through advanced data science methodologies.',
+      features: [
+        'Cultural artifact digitization',
+        'Historical data preservation',
+        'Interactive cultural maps',
+        'Multimedia archives'
+      ],
+      technologies: ['Digital Archiving', 'Web Technologies', 'Database'],
+      status: 'Active',
+      link: '#'
+    },
+    {
+      id: 'mice-analysis',
+      title: 'MICE Industry Analysis',
+      description: 'Data-driven analysis of Meetings, Incentives, Conferences, and Events industry trends and impacts.',
+      features: [
+        'Industry trend analysis',
+        'Economic impact assessment',
+        'Predictive analytics',
+        'Market research insights'
+      ],
+      technologies: ['Data Analytics', 'Business Intelligence', 'Visualization'],
+      status: 'In Development',
+      link: '#'
+    },
+    {
+      id: 'maritime',
+      title: 'Maritime Sustainability',
+      description: 'Sustainable development solutions for maritime industries using data science and AI technologies.',
+      features: [
+        'Environmental impact analysis',
+        'Sustainability metrics',
+        'Resource optimization',
+        'Policy recommendation systems'
+      ],
+      technologies: ['Environmental Data Science', 'GIS', 'Sustainability Analytics'],
       status: 'Planning',
       link: '#'
+    }
+  ];
+
+  const researchLines = [
+    {
+      name: 'DS4Lang',
+      description: 'Language Technology and NLP for African Languages',
+      focus: 'Machine Translation, NER, Language Preservation'
+    },
+    {
+      name: 'DS4Health',
+      description: 'Healthcare and Genomics Research',
+      focus: 'Medical Data Science, Genomic Analysis, Public Health'
+    },
+    {
+      name: 'DS4Culture',
+      description: 'Digital Humanities and Cultural Preservation',
+      focus: 'Cultural Heritage, Digital Archives, Historical Analysis'
+    },
+    {
+      name: 'DS4Sustainability',
+      description: 'Sustainable Development and Environmental Science',
+      focus: 'Maritime Sustainability, Environmental Analytics'
     }
   ];
 
@@ -57,29 +122,18 @@ const LandingPage = () => {
 
   const team = [
     {
-      name: 'Prof. Dr. Philippe Tamla',
-      role: 'Project Director',
-      expertise: 'Computational Linguistics, African Languages',
+      name: 'Dr. Philippe Tamla',
+      role: 'Founder & Director',
+      expertise: 'Visiting Professor at ICT University, Postdoctoral Researcher at FernUniversität in Hagen',
       image: '/img/team/placeholder.jpg'
-    },
-    {
-      name: 'Stephane Donna',
-      role: 'AI/NLP Researcher',
-      expertise: 'Natural Language Processing, Machine Learning',
-      image: '/img/team/placeholder.jpg'
-    },
-    // {
-    //   name: 'Dr. Amadou Ba',
-    //   role: 'Language Specialist',
-    //   expertise: 'Fulfulde, Linguistic Annotation',
-    //   image: '/img/team/placeholder.jpg'
-    // },
-    // {
-    //   name: 'Marie Tchinda',
-    //   role: 'Software Engineer',
-    //   expertise: 'Full-stack Development, AI Integration',
-    //   image: '/img/team/placeholder.jpg'
-    // }
+    }
+  ];
+
+  const partnerships = [
+    'ICT University (Cameroon)',
+    'FernUniversität in Hagen (Germany)',
+    'International Research Collaborators',
+    'Student-led Research Networks'
   ];
 
   return (
@@ -88,16 +142,17 @@ const LandingPage = () => {
       <header className="landing-header">
         <nav className="landing-nav">
           <div className="nav-brand">
-            <img src="/img/ds4h-logo.png" alt="DS4H ICTU" className="logo" />
-            <span className="brand-text">DS4H ICTU</span>
+            <img src="/img/ds4h-logo.png" alt="DS4H" className="logo" />
+            <span className="brand-text">DS4H</span>
           </div>
           <ul className="nav-links">
             <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#publications">Research</a></li>
+            <li><a href="#team">Leadership</a></li>
+            <li><a href="#participation">Join Us</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><Link to="/cammt" className="nav-cta">Try CamMT</Link></li>
+            <li><Link to="/cammt" className="nav-cta">Try LinguoMT</Link></li>
           </ul>
           <div className="mobile-menu">
             <i className="fas fa-bars"></i>
@@ -109,32 +164,32 @@ const LandingPage = () => {
       <section className="hero">
         <div className="hero-content">
           <div className="hero-text">
-            <h1>Digital Solutions for African Low-Resource Languages</h1>
+            <h1>Data Science for Humanities</h1>
             <p className="hero-subtitle">
-              Advancing Natural Language Processing and Machine Learning for African languages 
-              through innovative research and technology at DS4H ICTU.
+              Empowering students to engage in impactful research and development at the 
+              intersection of Data Science, Artificial Intelligence, and Human-centered domains.
             </p>
             <div className="hero-stats">
               <div className="stat">
-                <span className="stat-number">10+</span>
-                <span className="stat-label">Languages Supported</span>
+                <span className="stat-number">6</span>
+                <span className="stat-label">Research Domains</span>
               </div>
               <div className="stat">
-                <span className="stat-number">3</span>
-                <span className="stat-label">Active Projects</span>
+                <span className="stat-number">4</span>
+                <span className="stat-label">Research Lines</span>
               </div>
               <div className="stat">
-                <span className="stat-number">50k+</span>
-                <span className="stat-label">Data Points</span>
+                <span className="stat-number">2</span>
+                <span className="stat-label">Partner Universities</span>
               </div>
             </div>
             <div className="hero-actions">
               <Link to="/cammt" className="btn btn-primary">
                 <i className="fas fa-language"></i>
-                Try CamMT Translation
+                Explore LinguoMT
               </Link>
-              <a href="#projects" className="btn btn-secondary">
-                Explore Projects
+              <a href="#research" className="btn btn-secondary">
+                View Research
               </a>
             </div>
           </div>
@@ -161,53 +216,95 @@ const LandingPage = () => {
       <section id="about" className="about">
         <div className="container">
           <div className="section-header">
-            <h2>About DS4H ICTU</h2>
+            <h2>About DS4H</h2>
             <p>
-              The Data Science for Health (DS4H) research group at ICTU is dedicated to 
-              developing innovative solutions for African low-resource languages.
+              Data Science for Humanities (DS4H) is an emerging initiative that explores and builds 
+              a future research-driven, non-profit organization empowering students in impactful research.
             </p>
+          </div>
+          <div className="mission-vision">
+            <div className="mission">
+              <h3>Our Mission</h3>
+              <ul>
+                <li>Support students at undergraduate, graduate, and doctoral levels in conducting applied research</li>
+                <li>Advance the use of Data Science and AI in socially meaningful domains</li>
+                <li>Foster collaboration across disciplines and continents (Africa and Europe)</li>
+                <li>Promote open research, language technologies, and inclusive innovation</li>
+              </ul>
+            </div>
+            <div className="vision">
+              <h3>Our Vision</h3>
+              <p>
+                DS4H envisions a world where students and researchers from diverse backgrounds can 
+                leverage AI and data-driven technologies to solve real-world problems, contribute to 
+                language preservation and digital culture, and build bridges between humanities and 
+                technology for the benefit of society.
+              </p>
+            </div>
           </div>
           <div className="about-grid">
             <div className="about-item">
               <div className="about-icon">
-                <i className="fas fa-microscope"></i>
+                <i className="fas fa-graduation-cap"></i>
               </div>
-              <h3>Research Excellence</h3>
+              <h3>Student Empowerment</h3>
               <p>
-                Conducting cutting-edge research in NLP, machine learning, and computational 
-                linguistics for African languages.
+                Supporting students at all levels to engage in hands-on research and project 
+                development with mentorship from experienced researchers.
               </p>
             </div>
             <div className="about-item">
               <div className="about-icon">
                 <i className="fas fa-globe-africa"></i>
               </div>
-              <h3>Cultural Preservation</h3>
+              <h3>Cross-Continental Collaboration</h3>
               <p>
-                Preserving and digitizing African languages to ensure cultural heritage 
-                is maintained for future generations.
+                Building bridges between Africa and Europe through collaborative research 
+                networks and academic partnerships.
               </p>
             </div>
             <div className="about-item">
               <div className="about-icon">
-                <i className="fas fa-users"></i>
+                <i className="fas fa-open-source"></i>
               </div>
-              <h3>Community Impact</h3>
+              <h3>Open Research</h3>
               <p>
-                Building tools and resources that directly benefit African communities 
-                and promote linguistic diversity.
+                Promoting transparency, knowledge sharing, and open-source development 
+                for the benefit of the global research community.
               </p>
             </div>
             <div className="about-item">
               <div className="about-icon">
-                <i className="fas fa-code"></i>
+                <i className="fas fa-heart"></i>
               </div>
-              <h3>Open Innovation</h3>
+              <h3>Human-Centered AI</h3>
               <p>
-                Developing open-source solutions and sharing research to advance the 
-                field of African language technology.
+                Focusing on AI and data science applications that address real human needs 
+                and contribute to social good.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Research Lines Section */}
+      <section id="research" className="research-lines">
+        <div className="container">
+          <div className="section-header">
+            <h2>Research Lines</h2>
+            <p>
+              Our thematic research areas organized into specialized focus groups 
+              addressing key challenges in data science and humanities.
+            </p>
+          </div>
+          <div className="research-grid">
+            {researchLines.map((line, index) => (
+              <div key={index} className="research-item">
+                <h3>{line.name}</h3>
+                <p className="research-description">{line.description}</p>
+                <p className="research-focus"><strong>Focus:</strong> {line.focus}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -216,10 +313,10 @@ const LandingPage = () => {
       <section id="projects" className="projects">
         <div className="container">
           <div className="section-header">
-            <h2>Our Projects</h2>
+            <h2>Current Projects</h2>
             <p>
-              Innovative solutions addressing the scarcity of digital resources 
-              for African low-resource languages.
+              Student-led research projects under academic supervision, spanning multiple 
+              domains from language technology to sustainable development.
             </p>
           </div>
           <div className="projects-grid">
@@ -258,11 +355,11 @@ const LandingPage = () => {
                 <div className="project-actions">
                   {project.link !== '#' ? (
                     <Link to={project.link} className="btn btn-primary">
-                      Launch Project
+                      Explore Project
                     </Link>
                   ) : (
                     <button className="btn btn-secondary" disabled>
-                      Coming Soon
+                      In Development
                     </button>
                   )}
                 </div>
@@ -278,8 +375,8 @@ const LandingPage = () => {
           <div className="section-header">
             <h2>Supported Languages</h2>
             <p>
-              We work with a diverse range of African languages, focusing on those 
-              with limited digital resources.
+              Our language technology research focuses on African low-resource languages, 
+              contributing to their preservation and digital presence.
             </p>
           </div>
           <div className="languages-grid">
@@ -287,7 +384,7 @@ const LandingPage = () => {
               <div key={index} className="language-item">
                 <span className="language-name">{language}</span>
                 <div className="language-info">
-                  <span className="language-status">Active</span>
+                  <span className="language-status">Research Active</span>
                 </div>
               </div>
             ))}
@@ -295,13 +392,14 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Leadership Section */}
       <section id="team" className="team">
         <div className="container">
           <div className="section-header">
-            <h2>Our Team</h2>
+            <h2>Leadership</h2>
             <p>
-              Meet the researchers and engineers working to advance African language technology.
+              DS4H operates under collaborative governance with academic supervision 
+              and student empowerment at its core.
             </p>
           </div>
           <div className="team-grid">
@@ -318,36 +416,80 @@ const LandingPage = () => {
               </div>
             ))}
           </div>
+          <div className="governance-info">
+            <h3>Governance Principles</h3>
+            <div className="principles-grid">
+              <div className="principle">
+                <i className="fas fa-eye"></i>
+                <span>Transparency</span>
+              </div>
+              <div className="principle">
+                <i className="fas fa-hands-helping"></i>
+                <span>Mentorship</span>
+              </div>
+              <div className="principle">
+                <i className="fas fa-share-alt"></i>
+                <span>Shared Learning</span>
+              </div>
+              <div className="principle">
+                <i className="fas fa-file-alt"></i>
+                <span>Documentation</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Publications Section */}
-      <section id="publications" className="publications">
+      {/* Participation Section */}
+      <section id="participation" className="participation">
         <div className="container">
           <div className="section-header">
-            <h2>Recent Publications</h2>
-            <p>Our latest research contributions to the field.</p>
+            <h2>Join DS4H</h2>
+            <p>
+              DS4H welcomes students, researchers, and collaborators from diverse backgrounds 
+              to contribute to our mission.
+            </p>
           </div>
-          <div className="publications-list">
-            <div className="publication-item">
-              <h4>LinguoMT: A Transformer-based Multi Translation System for
-Low-Resource Languages - A Case of African Languages</h4>
-              <p className="publication-authors">
-Prof. Dr. Philippe Tamla, Stephane Donna, Nde Dilan & al</p>
-              <p className="publication-venue">Journal of African Language Technology, 2024</p>
-              <a href="#" className="publication-link">Read Paper</a>
+          <div className="participation-grid">
+            <div className="participation-item">
+              <h3>ICTU Students</h3>
+              <p>Bachelor, Master, and PhD students can join research projects and contribute to ongoing initiatives.</p>
+              <ul>
+                <li>Hands-on research experience</li>
+                <li>Academic supervision</li>
+                <li>Thesis support</li>
+                <li>Publication opportunities</li>
+              </ul>
             </div>
-            <div className="publication-item">
-              <h4>Building Digital Corpora for Cameroonian Languages</h4>
-              <p className="publication-authors">Tchinda, M., Kamdem, S.</p>
-              <p className="publication-venue">ACL Workshop on African NLP, 2024</p>
-              <a href="#" className="publication-link">Read Paper</a>
+            <div className="participation-item">
+              <h3>Visiting Researchers</h3>
+              <p>International researchers and project collaborators are welcome to contribute expertise.</p>
+              <ul>
+                <li>Cross-institutional collaboration</li>
+                <li>Knowledge exchange</li>
+                <li>Research partnerships</li>
+                <li>Mentoring opportunities</li>
+              </ul>
             </div>
-            <div className="publication-item">
-              <h4>Image-to-Text Translation for African Languages</h4>
-              <p className="publication-authors">Ba, A., Nkouatchet, J-M.</p>
-              <p className="publication-venue">EMNLP 2023</p>
-              <a href="#" className="publication-link">Read Paper</a>
+            <div className="participation-item">
+              <h3>Alumni & Volunteers</h3>
+              <p>Former students and international volunteers can continue contributing to research initiatives.</p>
+              <ul>
+                <li>Continued engagement</li>
+                <li>Mentoring current students</li>
+                <li>Project collaboration</li>
+                <li>Network expansion</li>
+              </ul>
+            </div>
+          </div>
+          <div className="partnerships">
+            <h3>Partner Institutions</h3>
+            <div className="partners-list">
+              {partnerships.map((partner, index) => (
+                <div key={index} className="partner-item">
+                  {partner}
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -357,16 +499,16 @@ Prof. Dr. Philippe Tamla, Stephane Donna, Nde Dilan & al</p>
       <section id="contact" className="contact">
         <div className="container">
           <div className="section-header">
-            <h2>Get In Touch</h2>
-            <p>Interested in collaborating or learning more about our work?</p>
+            <h2>Get Involved</h2>
+            <p>Interested in joining our research community or learning more about DS4H?</p>
           </div>
           <div className="contact-grid">
             <div className="contact-info">
               <div className="contact-item">
                 <i className="fas fa-map-marker-alt"></i>
                 <div>
-                  <h4>Location</h4>
-                  <p>ICTU Campus<br />Yaoundé, Cameroon</p>
+                  <h4>ICTU Campus</h4>
+                  <p>ICT University<br />Cameroon</p>
                 </div>
               </div>
               <div className="contact-item">
@@ -377,10 +519,10 @@ Prof. Dr. Philippe Tamla, Stephane Donna, Nde Dilan & al</p>
                 </div>
               </div>
               <div className="contact-item">
-                <i className="fas fa-phone"></i>
+                <i className="fas fa-graduation-cap"></i>
                 <div>
-                  <h4>Phone</h4>
-                  <p>+237 XXX XXX XXX</p>
+                  <h4>Academic Supervisor</h4>
+                  <p>Dr. Philippe Tamla</p>
                 </div>
               </div>
             </div>
@@ -391,6 +533,15 @@ Prof. Dr. Philippe Tamla, Stephane Donna, Nde Dilan & al</p>
                 </div>
                 <div className="form-group">
                   <input type="email" placeholder="Your Email" required />
+                </div>
+                <div className="form-group">
+                  <select required>
+                    <option value="">Interest Area</option>
+                    <option value="student">Student Participation</option>
+                    <option value="researcher">Research Collaboration</option>
+                    <option value="volunteer">Volunteer Opportunity</option>
+                    <option value="partnership">Institutional Partnership</option>
+                  </select>
                 </div>
                 <div className="form-group">
                   <textarea placeholder="Your Message" rows="5" required></textarea>
@@ -409,9 +560,10 @@ Prof. Dr. Philippe Tamla, Stephane Donna, Nde Dilan & al</p>
         <div className="container">
           <div className="footer-content">
             <div className="footer-section">
-              <h4>DS4H ICTU</h4>
+              <h4>DS4H Initiative</h4>
               <p>
-                Advancing African language technology through research and innovation.
+                Empowering students through research at the intersection of Data Science, 
+                AI, and Human-centered domains.
               </p>
               <div className="social-links">
                 <a href="#"><i className="fab fa-twitter"></i></a>
@@ -421,33 +573,34 @@ Prof. Dr. Philippe Tamla, Stephane Donna, Nde Dilan & al</p>
               </div>
             </div>
             <div className="footer-section">
-              <h4>Projects</h4>
+              <h4>Research Lines</h4>
               <ul>
-                <li><Link to="/cammt">CamMT Translation</Link></li>
-                <li><a href="#">African Language Corpus</a></li>
-                <li><a href="#">Digital Dictionary</a></li>
+                <li><a href="#research">DS4Lang</a></li>
+                <li><a href="#research">DS4Health</a></li>
+                <li><a href="#research">DS4Culture</a></li>
+                <li><a href="#research">DS4Sustainability</a></li>
               </ul>
             </div>
             <div className="footer-section">
-              <h4>Resources</h4>
+              <h4>Projects</h4>
               <ul>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#">Datasets</a></li>
-                <li><a href="#">Documentation</a></li>
-                <li><a href="#">API</a></li>
+                <li><Link to="/cammt">LinguoMT</Link></li>
+                <li><a href="#">LinguoNER</a></li>
+                <li><a href="#">Healthcare & Genomics</a></li>
+                <li><a href="#">Digital Humanities</a></li>
               </ul>
             </div>
             <div className="footer-section">
               <h4>Contact</h4>
               <ul>
-                <li>ds4h@ictu.cm</li>
-                <li>ICTU Campus, Douala</li>
+                <li>ds4h@ictuniversity.edu.cm</li>
+                <li>ICT University</li>
                 <li>Cameroon</li>
               </ul>
             </div>
           </div>
           <div className="footer-bottom">
-            <p>&copy; 2024 DS4H ICTU. All rights reserved.</p>
+            <p>&copy; 2024 DS4H Initiative. All rights reserved.</p>
           </div>
         </div>
       </footer>

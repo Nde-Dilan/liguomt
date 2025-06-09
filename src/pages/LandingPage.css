@@ -17,9 +17,10 @@
 
 .landing-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 1rem 5%;
+  gap: 15px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -31,6 +32,7 @@
   color: white;
   font-weight: bold;
   font-size: 1.5rem;
+  margin-right: 10.2rem;
 }
 
 .nav-brand .logo {
@@ -698,3 +700,238 @@
     text-align: center;
   }
 }
+
+
+/* ...existing code... */
+
+/* Mission Vision Section */
+.mission-vision {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin: 3rem 0;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 15px;
+}
+
+.mission h3,
+.vision h3 {
+  color: #fc660e;
+  margin-bottom: 1rem;
+}
+
+.mission ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mission li {
+  padding: 0.5rem 0;
+  border-left: 3px solid #fc660e;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Research Lines Section */
+.research-lines {
+  padding: 80px 0;
+  background: white;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.research-item {
+  background: linear-gradient(135deg, #fc660e, #e55a0c);
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.research-item:hover {
+  transform: translateY(-5px);
+}
+
+.research-item h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.research-description {
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.research-focus {
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 1rem;
+}
+
+/* Governance Section */
+.governance-info {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.governance-info h3 {
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+}
+
+.principle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.principle:hover {
+  transform: translateY(-5px);
+}
+
+.principle i {
+  font-size: 2rem;
+  color: #fc660e;
+}
+
+.principle span {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Participation Section */
+.participation {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.participation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.participation-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.participation-item:hover {
+  transform: translateY(-5px);
+}
+
+.participation-item h3 {
+  color: #fc660e;
+  margin-bottom: 1rem;
+}
+
+.participation-item ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.participation-item li {
+  padding: 0.25rem 0;
+  color: #666;
+}
+
+.participation-item li:before {
+  content: "→";
+  color: #fc660e;
+  margin-right: 0.5rem;
+}
+
+/* Partnerships */
+.partnerships {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.partnerships h3 {
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.partners-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.partner-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 4px solid #fc660e;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Contact Form Updates */
+.contact-form select {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: white;
+}
+
+.contact-form select:focus {
+  outline: none;
+  border-color: #fc660e;
+}
+
+/* Responsive Updates */
+@media (max-width: 768px) {
+  .mission-vision {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .participation-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .partners-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ...existing code... */
